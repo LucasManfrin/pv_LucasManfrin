@@ -398,7 +398,127 @@ footer::before {
   color: #ff8013;
   text-align: center;
 }
+
+/* Estilo da seção de explicação */
 .meu-explicacao {
-  background-image: black;
-  color: white;
+  padding: 50px 0;
+  background-color: #333;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras suaves para destaque */
+  margin: 30px 0;
 }
+
+/* Estilo dos títulos */
+.meu-explicacao h2 {
+  color: #4CAF50; /* Cor verde para títulos */
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #4CAF50; /* Linha decorativa */
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.meu-explicacao h2.wow {
+  animation-duration: 1.2s;
+}
+
+/* Parágrafos explicativos */
+.meu-explicacao p {
+  font-size: 1.2em;
+  color: #ddd;
+  margin: 20px 0;
+  text-align: justify;
+}
+
+/* Listagem com animações */
+.meu-explicacao ol {
+  padding-left: 20px;
+  font-size: 1.2em;
+  list-style-type: decimal;
+}
+
+.meu-explicacao ol li {
+  margin: 15px 0;
+  color: #f0ad4e; /* Cor laranja suave */
+  font-weight: bold;
+}
+
+/* Animações de bounce (usando a biblioteca wow.js) */
+.wow {
+  visibility: hidden;
+}
+
+/* Efeitos de Hover nos Títulos e Ícones */
+.meu-explicacao h2:hover, 
+.meu-explicacao ol li:hover {
+  transform: scale(1.03); /* Efeito de zoom ao passar o mouse */
+  transition: transform 0.3s ease-in-out; /* Transição suave */
+}
+
+/* Centralização de texto */
+.text-center {
+  text-align: center;
+}
+
+/* Estilos para colunas e alinhamento */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.col-md-12 {
+  width: 100%;
+  padding: 15px;
+}
+
+/* Estilo de sombras nos blocos */
+.meu-explicacao .container {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+/* Efeitos de Hover e transições */
+.meu-explicacao:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.meu-explicacao p:hover {
+  transform: scale(1.02); /* Efeito de zoom ao passar o mouse sobre o texto */
+  transition: transform 0.3s ease-in-out; /* Transição suave */
+}
+
+/* Estilizando links */
+a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+  .meu-explicacao h2 {
+    font-size: 2em;
+  }
+  
+  .meu-explicacao p {
+    font-size: 1em;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+}
+
+
