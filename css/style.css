@@ -9,7 +9,7 @@ body {
   font-family: 'Lato', sans-serif;
   overflow: hidden;
   overflow-y: scroll;
-  background-color: #000;
+  background-color: #212529;
 }
 body .bg-img {
   background-repeat: no-repeat;
@@ -400,125 +400,273 @@ footer::before {
 }
 
 /* Estilo da seção de explicação */
-.meu-explicacao {
-  padding: 50px 0;
-  background-color: #333;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras suaves para destaque */
-  margin: 30px 0;
-}
-
-/* Estilo dos títulos */
+/* Estilo dos títulos dentro de .meu-explicacao */
 .meu-explicacao h2 {
-  color: #4CAF50; /* Cor verde para títulos */
-  font-size: 2.5em;
-  text-align: center;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  border-bottom: 3px solid #4CAF50; /* Linha decorativa */
-  display: inline-block;
-  padding-bottom: 10px;
+  color: #ff8013;         /* Cor verde claro para destaque */
+  font-size: 2em;         /* Tamanho maior para visibilidade */
+  font-weight: 700;       /* Peso da fonte para dar ênfase */
+  text-align: center;     /* Centralizado para uniformidade */
+  margin-bottom: 15px;    /* Espaço abaixo do título */
 }
 
-.meu-explicacao h2.wow {
-  animation-duration: 1.2s;
-}
-
-/* Parágrafos explicativos */
+/* Estilo para parágrafos dentro de .meu-explicacao */
 .meu-explicacao p {
-  font-size: 1.2em;
-  color: #ddd;
-  margin: 20px 0;
-  text-align: justify;
+  color: white;         /* Cor de texto cinza claro para suavidade */
+  font-size: 1.1em;       /* Tamanho do texto para melhor leitura */
+  line-height: 1.6;       /* Espaçamento entre linhas para legibilidade */
+  text-align: justify;    /* Alinhamento justificado para um visual clean */
+  margin-bottom: 15px;    /* Espaço entre parágrafos */
 }
 
-/* Listagem com animações */
-.meu-explicacao ol {
-  padding-left: 20px;
-  font-size: 1.2em;
+/* Estilo para lista numerada */
+ol {
   list-style-type: decimal;
+  padding-left: 20px;
 }
 
-.meu-explicacao ol li {
-  margin: 15px 0;
-  color: #f0ad4e; /* Cor laranja suave */
+ol li {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #f2f2f2;
+}
+
+/* Estilo para a seção principal */
+.meu-explicacao {
+  background-color: #2b2b2b;
+  padding: 40px;
+}
+
+/* Animações */
+.wow.bounceInUp, .wow.bounceInDown, .wow.bounceInLeft {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+.wow.bounceInUp {
+  animation-name: bounceInUp;
+}
+
+.wow.bounceInDown {
+  animation-name: bounceInDown;
+}
+
+.wow.bounceInLeft {
+  animation-name: bounceInLeft;
+}
+
+/* Estilo das animações */
+@keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translateY(3000px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+
+  75% {
+    transform: translateY(10px);
+  }
+
+  90% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceInDown {
+  0%, 60%, 75%, 90%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translateY(-3000px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(25px);
+  }
+
+  75% {
+    transform: translateY(-10px);
+  }
+
+  90% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceInLeft {
+  0%, 60%, 75%, 90%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translateX(-3000px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(25px);
+  }
+
+  75% {
+    transform: translateX(-10px);
+  }
+
+  90% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8em;
+  }
+
+  p, ol li {
+    font-size: 1em;
+  }
+
+  .meu-explicacao {
+    padding: 20px;
+  }
+}
+
+/* Estilo relato das pessoas */
+
+/* Estilo para o Título Principal */
+.exercise-title {
+  font-size: 2.5em;
   font-weight: bold;
-}
-
-/* Animações de bounce (usando a biblioteca wow.js) */
-.wow {
-  visibility: hidden;
-}
-
-/* Efeitos de Hover nos Títulos e Ícones */
-.meu-explicacao h2:hover, 
-.meu-explicacao ol li:hover {
-  transform: scale(1.03); /* Efeito de zoom ao passar o mouse */
-  transition: transform 0.3s ease-in-out; /* Transição suave */
-}
-
-/* Centralização de texto */
-.text-center {
   text-align: center;
+  /* margin-top: 1em; */
+  color: #ff8013;
 }
 
-/* Estilos para colunas e alinhamento */
-.container {
+/* Estilo para o Subtítulo */
+.exercise-subtitle {
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 0.5em;
+  color: #666;
+  line-height: 1.5em;
+}
+
+/* Container Principal dos Cards */
+.exercise-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5em;
+  padding: 2em;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  margin: auto;
 }
 
-.row {
-  display: flex;
-  justify-content: center;
-}
-
-.col-md-12 {
-  width: 100%;
-  padding: 15px;
-}
-
-/* Estilo de sombras nos blocos */
-.meu-explicacao .container {
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
-}
-
-/* Efeitos de Hover e transições */
-.meu-explicacao:hover {
-  transform: translateY(-5px);
+/* Estilo dos Cards Individuais */
+.exercise-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
   transition: transform 0.3s ease;
 }
 
-.meu-explicacao p:hover {
-  transform: scale(1.02); /* Efeito de zoom ao passar o mouse sobre o texto */
-  transition: transform 0.3s ease-in-out; /* Transição suave */
+.exercise-card:hover {
+  transform: translateY(-5px);
 }
 
-/* Estilizando links */
-a {
-  color: #4CAF50;
+/* Estilo da Imagem do Card */
+.exercise-card img {
+  width: 100%;
+  height: 230px;
+}
+
+/* Estilo do Título do Card */
+.exercise-card h3 {
+  font-size: 1.5em;
+  margin: 0.8em 0 0.5em 0;
+  color: #333;
+}
+
+/* Estilo do Texto Descritivo do Card */
+.exercise-card p {
+  font-size: 1em;
+  color: #555;
+  padding: 0 1em;
+  line-height: 1.4em;
+}
+
+/* Estilo do Link */
+.exercise-card a {
+  display: inline-block;
+  margin: 1em 0 1.5em;
+  font-weight: bold;
+  color: #ff5252;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-a:hover {
-  text-decoration: underline;
+.exercise-card a:hover {
+  color: #ff0000;
 }
 
-/* Estilo para dispositivos móveis */
-@media (max-width: 768px) {
-  .meu-explicacao h2 {
-    font-size: 2em;
-  }
-  
-  .meu-explicacao p {
-    font-size: 1em;
-  }
-  
-  .container {
-    padding: 10px;
-  }
+/* Tabela de comparação */
+
+.meu-comparativo h1 {
+  text-align: center;
+  color: #ff8013;
 }
 
+.comparativo-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
 
+.comparativo-table th, .comparativo-table td {
+  border: 2px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.comparativo-table {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.preto {
+  color: black;
+  font-weight: bold;
+}
+/* .comparativo-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+} */
+
+/* .comparativo-table tr:hover {
+  background-color: #ddd;
+}
+ */
