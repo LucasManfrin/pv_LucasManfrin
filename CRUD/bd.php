@@ -15,4 +15,10 @@ $sql ->execute(array($_POST['nome'],
                      $_POST['email'],
                      date("Y-m-d H:i:s")
 ));
+
+
+echo "<script>
+            window.alert('Cadastro realizado com sucesso!');
+            window.location.href = '../index.html';
+          </script>";
 ?>
